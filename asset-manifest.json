@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.cd77fe6e.css",
+    "main.js": "/my-portfolio/static/js/main.83d6c5dc.js",
+    "static/js/453.41811d64.chunk.js": "/my-portfolio/static/js/453.41811d64.chunk.js",
+    "static/media/iphone-coin-spin.mp4": "/my-portfolio/static/media/iphone-coin-spin.d95c5bf3abebddc60cc3.mp4",
+    "static/media/funnyDog.png": "/my-portfolio/static/media/funnyDog.215750ceeb119a7fa4e6.png",
+    "static/media/logoo.png": "/my-portfolio/static/media/logoo.3402516c6319f1832293.png",
+    "static/media/myimage.png": "/my-portfolio/static/media/myimage.913e3ec2ba2fe4bc6a54.png",
+    "static/media/TeamThrive.png": "/my-portfolio/static/media/TeamThrive.2cf37fb963183d7d6332.png",
+    "static/media/MyPortfolio.png": "/my-portfolio/static/media/MyPortfolio.8a4943c2eac2873085d3.png",
+    "static/media/hello-world-html-code-768x384.webp": "/my-portfolio/static/media/hello-world-html-code-768x384.c6d86dddde7b4b7c150f.webp",
+    "static/media/computer-stroke-rounded.svg": "/my-portfolio/static/media/computer-stroke-rounded.d43e2253eca503173df806e194287a23.svg",
+    "static/media/react-stroke-rounded.svg": "/my-portfolio/static/media/react-stroke-rounded.bf7e17c00ca38adbdbc7999dca077ce9.svg",
+    "static/media/icons8-flutter.svg": "/my-portfolio/static/media/icons8-flutter.ea1f655953a44d2cded2b0da1689c48a.svg",
+    "index.html": "/my-portfolio/index.html",
+    "main.cd77fe6e.css.map": "/my-portfolio/static/css/main.cd77fe6e.css.map",
+    "main.83d6c5dc.js.map": "/my-portfolio/static/js/main.83d6c5dc.js.map",
+    "453.41811d64.chunk.js.map": "/my-portfolio/static/js/453.41811d64.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd77fe6e.css",
+    "static/js/main.83d6c5dc.js"
+  ]
+}
