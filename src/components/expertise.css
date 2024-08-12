@@ -1,0 +1,166 @@
+.expertise-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #0d0d14;
+    color: #fff;
+    position: relative;
+    padding-bottom: 5rem; /* Adjust this value based on the size of your image */
+}
+
+.expertise-background {
+    position: relative;
+    margin-top: -1.5rem; /* Adjust the margin to position it below the cards */
+    width: 40%; /* Adjust this to make the background smaller */
+    max-width: 1000px; /* Ensure it doesn't get too large */
+    z-index: 0; /* Ensure the background is behind the cards */
+    opacity: 0.2;
+    pointer-events: none; /* Prevent interactions with the background image */
+}
+
+.expertise-container h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.expertise-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    z-index: 2; /* Ensure cards are above the background */
+    position: relative;
+}
+
+.expertise-card {
+    background: transparent;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 20%;
+    min-width: 250px;
+    text-align: left;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    z-index: 3; /* Ensure individual cards are above the background */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Add shadow to make them stand out */
+}
+
+.expertise-card.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px);
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    font-size: 3.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Specific icon styles */
+.software-icon svg {
+    width: 48px;
+    height: 48px;
+    fill: transparent; /* Example color for Software Development */
+}
+
+.frontend-icon svg {
+    width: 48px;
+    height: 48px;
+    fill: transparent; /* React logo color for Frontend Dev */
+}
+
+.flutter-icon svg {
+    width: 48px;
+    height: 48px;
+    fill: #ffffff; /* White color for Flutter Dev */
+}
+
+h2 {
+    font-size: auto;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    position: relative;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ddd;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h3::before, h3::after {
+    font-family: 'Courier New', Courier, monospace;
+    color: #888;
+}
+
+h3::before {
+    content: '<h3>';
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+h3::after {
+    content: '</h3>';
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.h3-content {
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+    margin-left: 20px;
+    border-left: 2px solid #444;
+}
+
+@media (max-width: 1200px) {
+    .expertise-background {
+        width: 60%;
+        margin-top: -3rem;
+    }
+
+    .expertise-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .expertise-card {
+        width: 90%;
+    }
+
+    .expertise-container h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 150px) {
+    .expertise-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .expertise-card {
+        width: 100%;
+    }
+
+    .expertise-container h1 {
+        font-size: 2rem;
+    }
+}

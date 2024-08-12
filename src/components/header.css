@@ -1,0 +1,187 @@
+.header {
+  position: relative;
+  height: 100vh;
+  background-color: #0d0d14;
+  color: white;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.header-background {
+  z-index: -1;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Ensure space between logo and navbar */
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem; /* Default size */
+  color: #20a99f;
+  position: absolute; /* Position relative to the header */
+  top: 20px; /* Space from top */
+  left: 20px; /* Space from left */
+  flex-shrink: 1;
+  z-index: 3; /* Ensure logo is above other content */
+  margin-left: auto;
+  max-width: calc(100vw - 40px); /* Prevent the logo from overflowing the screen */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+.hamburger-button {
+  display: none; /* Hidden by default */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 3; /* Ensure button is above other content */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Space between navbar items */
+  margin-top: 30px;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s ease; /* Smooth transition for responsiveness */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  padding-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav a .nav-number {
+  font-size: 0.6rem;
+  color: #888;
+  position: absolute;
+  right: 0;
+  top: -10px;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+.nav:hover a {
+  color: grey;
+}
+
+.nav a:hover {
+  color: white !important;
+}
+
+.nav a:hover .nav-number {
+  color: white;
+}
+
+.nav:hover a:hover .nav-number {
+  color: white !important;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+.scroll-button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+.scroll-button {
+  pointer-events: auto;
+}
+
+/* Further adjustments for smaller viewports */
+@media (max-width: 1487px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center; /* Center items for mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    position: absolute; /* Changed from fixed to absolute */
+    top: 20px; /* Space from top */
+    left: 20px; /* Space from left */
+    z-index: 3; /* Ensure logo is above other content */
+    max-width: calc(100vw - 40px); /* Prevent the logo from overflowing the screen */
+  }
+
+  .hamburger-button {
+    display: block;
+    position: fixed; /* Fixed position to keep it in view */
+    top: 20px; /* Adjust top position */
+    right: 20px; /* Adjust right position */
+    z-index: 3; /* Ensure button is above other content */
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Fixed position for mobile menu */
+    top: -30px; /* Start at the top of the page */
+    left: 0; /* Align to the left edge */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    transform: translateY(-100%); /* Initially off-screen */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 2; /* Ensure menu is above other content */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    overflow: auto; /* Enable scrolling if content exceeds viewport height */
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
+
+  .nav {
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+
+  .nav.open {
+    transform: translateY(0); /* Slide in menu from top */
+  }
+
+  .nav a {
+    margin-bottom: 15px; /* Adjust space between menu items */
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+}
