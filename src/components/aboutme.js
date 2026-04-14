@@ -37,7 +37,7 @@ const AboutMe = () => {
             <div className="about-me-text">
                 <h2>About Me</h2>
                 <p>
-                    Hi, I'm Mohamed Aziz Hendili, a Software Engineer and Front End & App Developer student. I am currently studying at the Private Higher School of Engineering and Technology - ESPRIT, after having completed my studies at the Higher Institute of Computer Science (ISI Ariana). I am passionate about creating innovative solutions and am dedicated to applying my skills to real-world challenges. Additionally, I have a keen interest in data analytics and business intelligence, which I incorporate into my development work to enhance insights and decision-making.
+                    Ingénieur en Data Engineering & Business Intelligence, je conçois des solutions data end-to-end — de la modélisation Snowflake aux pipelines ETL/ELT, en passant par des tableaux de bord Tableau et Power BI à forte valeur décisionnelle. Passé par Société Générale en tant que Business Analyst IT, j'ai développé une double compétence technique et fonctionnelle : analyse des besoins, rédaction de spécifications et collaboration étroite avec les équipes produit en environnement Agile. Aujourd'hui consultant BI/Data chez Codway, je m'appuie sur cette expérience pour accompagner des clients exigeants dans leur transformation data.
                 </p>
             </div>
             <img src={profileImage} alt="Profile" className="about-me-image" />

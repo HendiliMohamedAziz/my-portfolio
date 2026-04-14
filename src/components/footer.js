@@ -73,7 +73,7 @@ const Footer = () => {
 
       {/* Right Side: Name */}
       <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '1.5rem', textAlign: 'right', flexShrink: 0 }}>
-        Mohamed Aziz Hendili - 2024
+        Mohamed Aziz Hendili - 2026
       </Typography>
     </Box>
   );

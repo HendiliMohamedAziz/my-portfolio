@@ -1,7 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { ReactComponent as Icon1 } from '../assets/computer-stroke-rounded.svg';
-import { ReactComponent as Icon2 } from '../assets/react-stroke-rounded.svg';
-import { ReactComponent as Icon3 } from '../assets/icons8-flutter.svg';
 import BackgroundImage from '../assets/hello-world-html-code-768x384.webp';
 import './expertise.css';
 
@@ -15,7 +12,7 @@ const Expertise = () => {
                     if (entry.isIntersecting) {
                         setTimeout(() => {
                             entry.target.classList.add('appear');
-                        }, index * 200); // Delay each card by 200ms
+                        }, index * 200);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -34,52 +31,48 @@ const Expertise = () => {
         };
     }, []);
 
+    const cards = [
+        {
+            emoji: '📊',
+            title: 'Analyse Métier',
+            description: 'Spécifications fonctionnelles, User stories, modélisation de processus et conduite d\'ateliers. Expérience en environnement bancaire (Société Générale) avec méthodologies Agile/Scrum.',
+            colorClass: 'business-icon',
+        },
+        {
+            emoji: '📈',
+            title: 'BI & Reporting',
+            description: 'Conception de tableaux de bord avancés avec Power BI et Tableau. Modélisation de données Snowflake pour le reporting décisionnel et l\'analyse métier.',
+            colorClass: 'frontend-icon',
+        },
+        {
+            emoji: '⚙️',
+            title: 'Data Engineering',
+            description: 'Développement de pipelines ETL/ELT, traitement de données en temps réel avec Apache Spark et Kafka. Automatisation et optimisation de flux de données à grande échelle.',
+            colorClass: 'flutter-icon',
+        },
+    ];
+
     return (
         <div className="expertise-container" id='expertise'>
             <h1>My Expertise</h1>
             <div className="expertise-cards">
-                <div
-                    className="expertise-card"
-                    ref={(el) => (cardsRef.current[0] = el)}
-                >
-                    <div className="title-container">
-                        <div className="icon software-icon"><Icon1 /></div>
-                        <h2>Software Development</h2>
-                    </div>
-                    <h3>
-                        <div className="h3-content">
-                        Skilled in both functional and object-oriented programming with experience in Java, Python, C++, Dart, JavaScript, and TypeScript.
+                {cards.map((card, index) => (
+                    <div
+                        key={index}
+                        className="expertise-card"
+                        ref={(el) => (cardsRef.current[index] = el)}
+                    >
+                        <div className="title-container">
+                            <div className={`icon ${card.colorClass}`} style={{ fontSize: '2.5rem' }}>{card.emoji}</div>
+                            <h2>{card.title}</h2>
                         </div>
-                    </h3>
-                </div>
-                <div
-                    className="expertise-card"
-                    ref={(el) => (cardsRef.current[1] = el)}
-                >
-                    <div className="title-container">
-                        <div className="icon frontend-icon"><Icon2 /></div>
-                        <h2>Frontend Dev</h2>
+                        <h3>
+                            <div className="h3-content">
+                                {card.description}
+                            </div>
+                        </h3>
                     </div>
-                    <h3>
-                        <div className="h3-content">
-                            Experienced in building responsive and user-friendly interfaces with HTML5, CSS, JavaScript, TypeScript, React, and Angular frameworks.
-                        </div>
-                    </h3>
-                </div>
-                <div
-                    className="expertise-card"
-                    ref={(el) => (cardsRef.current[2] = el)}
-                >
-                    <div className="title-container">
-                        <div className="icon flutter-icon"><Icon3 /></div>
-                        <h2>Flutter Dev</h2>
-                    </div>
-                    <h3>
-                        <div className="h3-content">
-                            Skilled in developing mobile apps using the Flutter framework.
-                        </div>
-                    </h3>
-                </div>
+                ))}
             </div>
             <img src={BackgroundImage} alt="Background" className="expertise-background" />
         </div>

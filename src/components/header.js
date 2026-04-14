@@ -48,7 +48,7 @@ const Header = () => {
       </div>
       <div className="hero">
         <h1>Mohamed Aziz Hendili</h1>
-        <p>SOFTWARE ENGINEER, FRONT END & APP DEVELOPER.</p>
+        <p>DATA ENGINEERING & BUSINESS INTELLIGENCE | CONSULTANT BI/DATA</p>
       </div>
       <div className="scroll-button-container">
         <ScrollButton />

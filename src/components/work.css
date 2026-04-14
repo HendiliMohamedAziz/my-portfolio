@@ -1,142 +1,141 @@
 .work-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #090B0F;
+    background-color: #0d0d14;
     color: white;
+    padding: 60px 40px;
     min-height: 100vh;
-    box-sizing: border-box;
-    flex-direction: row; /* Ensure side-by-side layout for large screens */
-}
-
-.textSection {
-    flex: 1;
-    max-width: 50%;
-    padding-right: 50px;
-}
-
-.title {
-    font-size: 4em;
-    margin: 0;
-}
-
-.description {
-    font-size: 1.2em;
-    margin-top: 20px;
-    line-height: 1.5;
-    color: white;
-}
-
-.videoSection {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 }
 
-.videoContainer {
-    width: 800px; 
-    height: 800px;
-    margin-bottom: 20px;
-    margin-left: 80px;
-    position: relative;
-}
-
-.video {
+.textSection {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+    max-width: 900px;
 }
 
-.featuredProject {
+.title {
+    font-size: 2.5rem;
+    color: #0e6e55;
+    margin-bottom: 40px;
     text-align: center;
-    position: absolute; /* Change to relative if absolute positioning is unnecessary */
-    bottom: 0; /* Adjust as necessary */
-    left: 20%; /* Center the featuredProject container */
-    transform: translateX(-50%);
+    border-bottom: 2px solid #a16f0b;
+    padding-bottom: 15px;
 }
 
-.arrowImage {
-    width: 200px; /* Adjust size as necessary */
-    height: auto;
-    margin-bottom: 20px; /* Add some space between the arrow and the text */
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
-    display: block; /* Ensure the arrow is treated as a block element */
+.timeline {
+    position: relative;
+    padding-left: 30px;
 }
 
-.projectTitle {
-    font-size: 1.5em;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #0e6e55, #a16f0b, #0e6e55, #a16f0b);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #0d0d14;
+}
+
+.timeline-content {
+    background-color: #13131f;
+    border-radius: 10px;
+    padding: 20px 25px;
+    border-left: 3px solid #0e6e55;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: -4px 0 12px rgba(14, 110, 85, 0.3);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.exp-company {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 0 2px 0;
+}
+
+.exp-client {
+    font-size: 0.85rem;
+    color: #a16f0b;
+    font-style: italic;
+}
+
+.exp-role {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin: 4px 0 0 0;
+    font-style: italic;
+}
+
+.exp-period {
+    font-size: 0.85rem;
+    color: #a16f0b;
+    font-weight: bold;
+    white-space: nowrap;
+    background: rgba(161, 111, 11, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(161, 111, 11, 0.3);
+}
+
+.exp-items {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-.projectName {
-    font-size: 1.2em;
-    margin: 10px 0;
+.exp-items li {
+    padding: 5px 0 5px 18px;
+    position: relative;
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-.viewProjectButton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #7209b7;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px; /* Add some space between the text and the button */
+.exp-items li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: #0e6e55;
+    font-weight: bold;
 }
 
-.viewProjectButton:hover {
-    background-color: #560982;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 1138px) {
+@media (max-width: 768px) {
     .work-container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-        padding: 20px;
+        padding: 40px 20px;
     }
 
-    .textSection {
-        max-width: 100%; /* Ensure text section uses full width */
-        padding-right: 0; /* Remove right padding */
-        text-align: center; /* Center text on smaller screens */
+    .timeline-header {
+        flex-direction: column;
     }
 
     .title {
-        font-size: 2.5em; /* Adjust font size for smaller screens */
-    }
-
-    .description {
-        font-size: 1em; /* Adjust font size for smaller screens */
-        margin-top: 10px;
-    }
-
-    .videoContainer {
-        width: 100%; 
-        height: auto;
-    }
-
-    .featuredProject {
-        bottom: 20px;
-        left: 15%; /* Center the featuredProject container on smaller screens */
-        transform: translateX(-50%);
-    }
-
-    .arrowImage {
-        width: 80px; /* Adjust arrow size for smaller screens */
-    }
-
-    .projectTitle {
-        font-size: 1em;
-        margin: 0;
-    }
-    
-    .projectName {
-        font-size: 0.7em;
-        margin: 10px 0;
+        font-size: 1.8rem;
     }
 }
