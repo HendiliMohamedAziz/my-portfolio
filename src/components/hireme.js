@@ -80,8 +80,8 @@ const HireMe = () => {
       ref={sectionRef}
       id="hireme"
     >
-      <span className="section-eyebrow">// 06 &middot; WHY HIRE ME</span>
-      <h1 className="title">Interactive Terminal</h1>
+      <span className="section-eyebrow">// 05 &middot; WHY HIRE ME</span>
+      <h1 className="title">The Hire Protocol</h1>
 
       <div className="terminal-window">
         <div className="terminal-bar">
