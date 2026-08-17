@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./header.css"; 
-import Background from "../assets/Background"; 
 import ScrollButton from "../assets/ScrollButton";
 
 const Header = () => {
@@ -43,12 +42,10 @@ const Header = () => {
           </a>
         </nav>
       </div>
-      <div className="header-background">
-        <Background />
-      </div>
       <div className="hero">
+        <span className="hero-eyebrow">// WELCOME TO MY ORBIT</span>
         <h1>Mohamed Aziz Hendili</h1>
-        <p>DATA ENGINEERING & BUSINESS INTELLIGENCE | CONSULTANT BI/DATA</p>
+        <p>DATA ENGINEERING &amp; BUSINESS INTELLIGENCE &nbsp;·&nbsp; BI/DATA CONSULTANT</p>
       </div>
       <div className="scroll-button-container">
         <ScrollButton />

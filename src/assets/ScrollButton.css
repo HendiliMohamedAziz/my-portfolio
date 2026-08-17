@@ -54,15 +54,15 @@
 
   @keyframes color {
     0% {
-      border-color: #f55;
+      border-color: var(--accent-secondary, #22d3ee);
     }
-    
+
     50% {
-      border-color: #55f;
+      border-color: var(--accent-primary, #8b5cf6);
     }
-    
+
     100% {
-      border-color: #5f5;
+      border-color: var(--accent-gold, #fbbf24);
     }
   }
   

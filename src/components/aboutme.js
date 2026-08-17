@@ -35,9 +35,10 @@ const AboutMe = () => {
             ref={aboutMeRef}
         >
             <div className="about-me-text">
+                <span className="section-eyebrow">// 02 · ABOUT ME</span>
                 <h2>About Me</h2>
                 <p>
-                    Ingénieur en Data Engineering & Business Intelligence, je conçois des solutions data end-to-end — de la modélisation Snowflake aux pipelines ETL/ELT, en passant par des tableaux de bord Tableau et Power BI à forte valeur décisionnelle. Passé par Société Générale en tant que Business Analyst IT, j'ai développé une double compétence technique et fonctionnelle : analyse des besoins, rédaction de spécifications et collaboration étroite avec les équipes produit en environnement Agile. Aujourd'hui consultant BI/Data chez Codway, je m'appuie sur cette expérience pour accompagner des clients exigeants dans leur transformation data.
+                    Data Engineering &amp; Business Intelligence Engineer with end-to-end data solution design expertise — from Snowflake data modeling to ETL/ELT pipelines and high-impact Tableau and Power BI dashboards. Previously a Business Analyst IT at Société Générale, I developed a dual technical and functional skill set: requirements gathering, functional specification writing, and close collaboration with product teams in Agile environments. Now a BI/Data Consultant at Codway, I leverage this experience to guide demanding clients through their data transformation journeys.
                 </p>
             </div>
             <img src={profileImage} alt="Profile" className="about-me-image" />

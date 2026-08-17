@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0d0d14;
-    color: white;
+    background: transparent;
+    color: var(--text-primary);
     padding: 50px;
     min-height: 100vh;
     box-sizing: border-box;
@@ -23,30 +23,57 @@
     max-width: 50%;
     width: 100%;
     height: auto;
-    max-width: 400px;
+    max-width: 380px;
     border-radius: 50%;
-    border: 1px solid #20a99f;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--bg-void), var(--bg-void)) padding-box,
+        linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) border-box;
+    padding: 4px;
     animation: float 4s ease-in-out infinite;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 40px var(--accent-primary-glow);
     position: relative;
-    margin-right: 10%; /* Adjust this value to move the image more or less to the left */
+    margin-right: 10%;
+    object-fit: cover;
 }
 
 .about-me-text {
     flex: 2;
     max-width: 50%;
     padding-left: 50px;
+    text-align: left;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 40px 45px;
+    backdrop-filter: blur(6px);
+}
+
+.section-eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    color: var(--accent-secondary);
+    margin-bottom: 14px;
+    opacity: 0.9;
 }
 
 .about-me-text h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 0 0 20px;
+    background: linear-gradient(90deg, #fff, var(--accent-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .about-me-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #ccc;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
 }
 
 @keyframes float {
@@ -67,17 +94,20 @@
     }
 
     .about-me-image {
-        max-width: 100%;
-        margin-bottom: 20px;
+        max-width: 70%;
+        margin-bottom: 30px;
+        margin-right: 0;
     }
 
     .about-me-text {
         max-width: 100%;
         padding-left: 0;
+        text-align: left;
+        padding: 30px 25px;
     }
 
     .about-me-text h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .about-me-text p {

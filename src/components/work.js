@@ -4,54 +4,54 @@ import "./work.css";
 const experiences = [
     {
         company: 'Codway',
-        client: 'Client : Vivescia, France',
-        role: 'Consultant BI / Data',
-        period: 'Jan 2026 – Présent',
-        color: '#0e6e55',
+        client: 'Client: Vivescia, France',
+        role: 'BI / Data Consultant',
+        period: 'Jan 2026 – Present',
+        color: 'var(--accent-secondary)',
         items: [
-            'Conception et optimisation de modèles de données Snowflake à des fins analytiques et de reporting métier.',
-            'Développement de pipelines ETL/ELT pour automatiser l\'ingestion et la transformation des données.',
-            'Création de tableaux de bord Tableau avancés pour appuyer la prise de décision des équipes métiers.',
-            'Amélioration des performances des requêtes et réduction des échecs de pipelines.',
-            'Collaboration avec les équipes produit et technique dans un environnement Agile.',
+            'Designed and optimized Snowflake data models for analytical and business reporting purposes.',
+            'Developed ETL/ELT pipelines to automate data ingestion and transformation workflows.',
+            'Built advanced Tableau dashboards to support business teams in data-driven decision-making.',
+            'Improved query performance and reduced pipeline failure rates.',
+            'Collaborated with product and technical teams in an Agile environment.',
         ],
     },
     {
         company: 'Société Générale',
         client: '',
-        role: 'Stagiaire Business Analyst IT',
-        period: 'Mai 2025 – Nov 2025',
-        color: '#a16f0b',
+        role: 'IT Business Analyst Intern',
+        period: 'May 2025 – Nov 2025',
+        color: 'var(--accent-gold)',
         items: [
-            'Collecté et analysé les besoins métiers et les ai traduits en spécifications fonctionnelles.',
-            'Collaboré avec les équipes de développement pour livrer des solutions alignées avec les besoins métiers.',
-            'Conçu des workflows de tests automatisés avec Playwright et TypeScript.',
-            'Participé aux cérémonies Agile incluant les revues de sprint et les discussions sur le backlog.',
-            'Développé des macros Excel VBA pour l\'automatisation de traitements de données et l\'optimisation de reportings.',
+            'Gathered and analyzed business requirements and translated them into functional specifications.',
+            'Collaborated with development teams to deliver solutions aligned with business needs.',
+            'Designed automated testing workflows using Playwright and TypeScript.',
+            'Participated in Agile ceremonies including sprint reviews and backlog discussions.',
+            'Developed Excel VBA macros to automate data processing and optimize reporting in cross-functional projects.',
         ],
     },
     {
         company: 'ARTCOM International',
         client: '',
-        role: 'Stagiaire Data Analyst',
-        period: 'Juin 2024 – Juil 2024',
-        color: '#0e6e55',
+        role: 'Data Analyst Intern',
+        period: 'Jun 2024 – Jul 2024',
+        color: 'var(--accent-secondary)',
         items: [
-            'Extrait et analysé les données métiers depuis des bases de données Oracle.',
-            'Conçu des tableaux de bord Power BI pour le suivi des performances et le reporting.',
-            'Effectué des contrôles de validation et de qualité des données pour garantir un reporting fiable.',
+            'Extracted and analyzed business data from Oracle databases.',
+            'Designed Power BI dashboards for performance tracking and reporting.',
+            'Performed data validation and quality checks to ensure reliable reporting.',
         ],
     },
     {
         company: 'Quantum Solutions',
         client: '',
-        role: 'Stagiaire Data Engineer',
-        period: 'Juil 2023 – Août 2023',
-        color: '#a16f0b',
+        role: 'Data Engineer Intern',
+        period: 'Jul 2023 – Aug 2023',
+        color: 'var(--accent-gold)',
         items: [
-            'Conçu des pipelines de données en temps réel avec Apache Spark et Kafka.',
-            'Implémenté des processus ETL scalables pour le traitement de grands volumes de données.',
-            'Surveillé les performances des pipelines et amélioré l\'efficacité du traitement des données.',
+            'Designed real-time data pipelines using Apache Spark and Kafka.',
+            'Implemented scalable ETL processes for high-volume data processing.',
+            'Monitored pipeline performance and improved data processing efficiency.',
         ],
     },
 ];
@@ -60,7 +60,8 @@ const MyWork = () => {
     return (
         <div className="work-container" id='work'>
             <div className="textSection">
-                <h1 className="title">Expérience Professionnelle</h1>
+                <span className="section-eyebrow">// 04 · EXPERIENCE</span>
+                <h1 className="title">Professional Experience</h1>
                 <div className="timeline">
                     {experiences.map((exp, index) => (
                         <div className="timeline-item" key={index}>

@@ -21,10 +21,14 @@ const Footer = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '1rem',
-        backgroundColor: '#0d0d14',
+        padding: '1.25rem 1.5rem',
+        backgroundColor: 'rgba(11, 14, 26, 0.65)',
+        backdropFilter: 'blur(8px)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
         color: '#fff',
         flexWrap: 'wrap',
+        position: 'relative',
+        zIndex: 1,
       }}
       id='contact'
     >

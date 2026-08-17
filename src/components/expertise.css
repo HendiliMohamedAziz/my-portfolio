@@ -1,50 +1,55 @@
 .expertise-container {
     text-align: center;
-    padding: 2rem;
-    background-color: #0d0d14;
-    color: #fff;
+    padding: 6rem 2rem;
+    background: transparent;
+    color: var(--text-primary);
     position: relative;
-    padding-bottom: 5rem; /* Adjust this value based on the size of your image */
 }
 
-.expertise-background {
-    position: relative;
-    margin-top: -1.5rem; /* Adjust the margin to position it below the cards */
-    width: 40%; /* Adjust this to make the background smaller */
-    max-width: 1000px; /* Ensure it doesn't get too large */
-    z-index: 0; /* Ensure the background is behind the cards */
-    opacity: 0.2;
-    pointer-events: none; /* Prevent interactions with the background image */
+.expertise-container .section-eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    color: var(--accent-secondary);
+    margin-bottom: 14px;
+    opacity: 0.9;
 }
 
 .expertise-container h1 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    background: linear-gradient(90deg, #fff, var(--accent-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .expertise-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    z-index: 2; /* Ensure cards are above the background */
+    gap: 1.5rem;
+    z-index: 2;
     position: relative;
 }
 
 .expertise-card {
-    background: transparent;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 1.5rem;
+    background: var(--bg-panel);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 1.8rem;
     width: 20%;
-    min-width: 250px;
+    min-width: 260px;
     text-align: left;
     height: auto;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    z-index: 3; /* Ensure individual cards are above the background */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Add shadow to make them stand out */
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 3;
 }
 
 .expertise-card.appear {
@@ -54,6 +59,8 @@
 
 .expertise-card:hover {
     transform: translateY(-10px);
+    border-color: var(--accent-secondary);
+    box-shadow: 0 12px 30px var(--accent-primary-glow);
 }
 
 .title-container {
@@ -63,27 +70,8 @@
 }
 
 .icon {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-right: 0.5rem;
-}
-
-/* Specific icon styles */
-.software-icon svg {
-    width: 48px;
-    height: 48px;
-    fill: transparent; /* Example color for Software Development */
-}
-
-.frontend-icon svg {
-    width: 48px;
-    height: 48px;
-    fill: transparent; /* React logo color for Frontend Dev */
-}
-
-.flutter-icon svg {
-    width: 48px;
-    height: 48px;
-    fill: #ffffff; /* White color for Flutter Dev */
 }
 
 h2 {
@@ -91,24 +79,26 @@ h2 {
     margin: 0;
     position: relative;
     display: inline-block;
-    color: white;
+    color: var(--text-primary);
+    font-family: var(--font-display);
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-weight: normal;
     position: relative;
     margin: 1rem 0;
     padding-left: 1rem;
     font-family: 'Courier New', Courier, monospace;
-    color: #ddd;
+    color: var(--text-secondary);
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 h3::before, h3::after {
     font-family: 'Courier New', Courier, monospace;
-    color: #888;
+    color: var(--accent-secondary);
+    opacity: 0.6;
 }
 
 h3::before {
@@ -127,15 +117,10 @@ h3::after {
     padding: 0.5rem 0;
     padding-left: 1rem;
     margin-left: 20px;
-    border-left: 2px solid #444;
+    border-left: 2px solid var(--border-soft);
 }
 
 @media (max-width: 1200px) {
-    .expertise-background {
-        width: 60%;
-        margin-top: -3rem;
-    }
-
     .expertise-cards {
         flex-direction: column;
         align-items: center;
@@ -143,21 +128,6 @@ h3::after {
 
     .expertise-card {
         width: 90%;
-    }
-
-    .expertise-container h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 150px) {
-    .expertise-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .expertise-card {
-        width: 100%;
     }
 
     .expertise-container h1 {
